@@ -15,5 +15,11 @@
     color: #fff;
     text-decoration: none;
     margin-left: 32px;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
+.active{
+    background-color: white;
+    color: black !important;
+}

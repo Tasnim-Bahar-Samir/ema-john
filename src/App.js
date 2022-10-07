@@ -5,15 +5,21 @@ import Main from './Layout/Main';
 import Shop from './Components/Shop/Shop'
 import Order from './Components/Order/Order';
 import Inventory from './Components/Inventory/Inventory';
+import Error from './Components/Error/Error';
 
 function App() {
   const router = createBrowserRouter([
     {
       path : '/',
       element:<Main/>,
+      errorElement:<Error/>,
       children:[
         {
-          path:'/',
+          path: '/',
+          element: <Shop/>
+        },
+        {
+          path:'/shop',
           element: <Shop/>
         },
         {
@@ -23,7 +29,8 @@ function App() {
         {
           path:'inventory',
           element: <Inventory/>
-        }
+        },
+        
       ]
     }
   ])
