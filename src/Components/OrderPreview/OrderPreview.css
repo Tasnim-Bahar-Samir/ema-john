@@ -1,0 +1,43 @@
+.order-review-container{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(149, 160, 167, 1);
+    border-radius: 8px;
+    padding: 8px;
+    margin-bottom: 21px;
+    max-width: 571px;
+    gap: 17px;
+}
+.order-review-container img{
+    width: 91px;
+   
+}
+
+.review-details-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.small-details{
+    font-size: 15px;
+    margin-top: 8px;
+}
+.small-details span{
+    color:#FF9900;
+}
+.rmv-btn{
+    margin-right:26px ;
+    width: 55px;
+    height: 55px;
+    background-color: rgba(235, 87, 87, 0.3);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.trash{
+    color:#EB5757;
+    width: 27px;
+    height: 31px;
+}
