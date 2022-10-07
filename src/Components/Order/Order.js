@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useLoaderData } from 'react-router-dom'
+import Cart from '../Cart/Cart';
+import OrderPreview from '../OrderPreview/OrderPreview';
 
 const Order = () => {
+  const {products,savedCart} = useLoaderData();
+  const [savedProducts,setSavedProducts] = useState(savedCart);
   return (
     <div>
-        <h1>This is order page</h1>
+        <div className='shop-container'>
+          <div>
+              {
+                savedProducts.map(product => <OrderPreview key={product.id} product = {product}/>)
+              }
+          </div>
+          <div className="cart-details">
+            <Cart cart={savedCart}/>
+          </div>
+        </div>
     </div>
   )
 }
