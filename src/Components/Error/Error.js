@@ -5,7 +5,7 @@ import './Error.css'
 const Error = () => {
     const error = useRouteError();
   return (
-    <div className='error'>
+    <div className='error '>
         <h1>Oops!</h1>
       <p>Sorry, an unexpected error has occurred.</p>
       <p>

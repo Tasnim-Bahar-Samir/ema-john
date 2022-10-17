@@ -27,3 +27,9 @@
     font-size: 14px;
     color: #2A414F;
 }
+
+@media screen and (max-width:1024px) {
+    .product-container{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -23,3 +23,21 @@
     background-color: white;
     color: black !important;
 }
+
+@media screen and (max-width:1050px){
+    .header{
+        padding: 60px;
+    }
+    .nav-link a{
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .header{
+        padding: 0 40px;
+    }
+    .nav-link a{
+        margin-left: 20px;
+    }
+}
