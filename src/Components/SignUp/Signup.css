@@ -1,3 +1,5 @@
 .err-msg{
     color: red;
+    display: block;
+    font-size:18px;
 }

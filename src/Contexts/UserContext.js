@@ -15,7 +15,7 @@ const UserContext = ({children}) => {
     }
 
     const user = {name:'samir'}
-    const userInfo = {user,createUser}
+    const userInfo = {user,createUser,userSignIn}
 
   return (
     <userAuth.Provider value={userInfo}>
