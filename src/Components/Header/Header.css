@@ -23,6 +23,17 @@
     background-color: white;
     color: black !important;
 }
+.btn-signout{
+    margin-left: 20px;
+    border: none;
+    background-color: #1C2B35;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid white;
+}
 
 @media screen and (max-width:1050px){
     .header{

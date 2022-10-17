@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { userAuth } from '../../Contexts/UserContext'
 import './SignIn.css';
 
 const SignIn = () => {
+  const navigate = useNavigate()
   const [error,setError] = useState('')
   const {userSignIn} = useContext(userAuth);
 
@@ -15,7 +16,8 @@ const SignIn = () => {
     userSignIn(email,password)
     .then(result =>{
       const user = result.user;
-      console.log(user)
+      console.log(user);
+      navigate('/')
     })
     .catch(err =>{
       console.log(err)
