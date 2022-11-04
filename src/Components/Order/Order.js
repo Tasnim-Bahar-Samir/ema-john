@@ -9,7 +9,7 @@ const Order = () => {
   const {savedCart} = useLoaderData();
   const [savedProducts,setSavedProducts] = useState(savedCart);
   const handleRemove = (id)=>{
-    const filteredProducts = savedProducts.filter(product => product.id !== id);
+    const filteredProducts = savedProducts.filter(product => product._id !== id);
     setSavedProducts(filteredProducts);
     removeFromDb(id);
   }
@@ -18,7 +18,7 @@ const Order = () => {
         <div className='shop-container'>
           <div className='review-order-container'>
               {
-                savedProducts.map(product => <OrderPreview key={product.id} product = {product} onRemove ={handleRemove}/>)
+                savedProducts.map(product => <OrderPreview key={product._id} product = {product} onRemove ={handleRemove}/>)
               }
               {
                 savedProducts.length === 0 && <h2>No product ordered to review. <Link to='/'>Shop Now!</Link></h2>

@@ -36,7 +36,7 @@ function App() {
           path:'/shipping',
           element:<PrivateRoutes><Shipping></Shipping></PrivateRoutes>
         },
-        {
+        { 
           path:'inventory',
           element: <PrivateRoutes><Inventory/></PrivateRoutes>
         },

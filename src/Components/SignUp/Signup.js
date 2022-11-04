@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { userAuth } from '../../Contexts/UserContext';
 import './Signup.css'
 
@@ -7,6 +7,9 @@ import './Signup.css'
 const Signup = () => {
   const {createUser} = useContext(userAuth);
   const[error,setError] = useState('');
+  const navigate = useNavigate()
+  const location = useLocation()
+  const from = location.state?.from?.pathname || '/';
   const handleSubmit = (e)=>{
     e.preventDefault()
     const form = e.target;
@@ -27,6 +30,7 @@ const Signup = () => {
     .then(result =>{
       const user = result.user;
       console.log(user)
+      navigate(from,{replace:true})
       form.reset()
     })
     .catch(err => console.error(err))

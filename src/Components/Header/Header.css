@@ -37,7 +37,7 @@
 
 @media screen and (max-width:1050px){
     .header{
-        padding: 60px;
+        padding: 0px 60px;
     }
     .nav-link a{
         margin-left: 20px;
